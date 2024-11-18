@@ -6,7 +6,7 @@ function App() {
 
   useEffect(() => {
     // Fetch a random quote from the backend API
-    axios.get("http://localhost:8080/api/quote")
+    axios.get("https://rhea-server-581626544249.asia-southeast1.run.app/api/quote")
       .then(response => {
         console.log(response.data);
         setQuote(response.data);
@@ -18,13 +18,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome to My Web Application</h1>
+      <h1>{quote}</h1>
 
       {/* Display image */}
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Fortune_cookies.jpg/640px-Fortune_cookies.jpg" alt="Random Image" width="300" />
-
-      {/* Display dynamic text */}
-      <p><strong>{quote}</strong></p>
 
       {/* Link to GitHub repository */}
       <a href="https://github.com/hungrhea/myrepo" target="_blank" rel="noopener noreferrer">Repository</a>

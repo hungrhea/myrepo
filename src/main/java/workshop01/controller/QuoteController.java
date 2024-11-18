@@ -22,7 +22,7 @@ public class QuoteController {
     );
 
     @GetMapping(value = "/api/quote", produces = "application/json")
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "*")
     public String getRandomQuote() {
         Random random = new Random();
         String msg = quotes.get(random.nextInt(quotes.size()));
