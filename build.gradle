@@ -1,5 +1,7 @@
 plugins {
+    id 'org.springframework.boot' version '2.7.4'  // Use the latest stable version
     id 'java'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
 group = 'workshop01'
@@ -10,8 +12,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'  // REST APIs
+    //testImplementation platform('org.junit:junit-bom:5.10.0')
+   // testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
 test {
